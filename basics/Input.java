@@ -8,7 +8,7 @@ public class Input {
         int number = sc.nextInt();
         System.out.println(number);
         String str = sc.nextLine();
-        System.out.println("Hello"+str);
+        System.out.println("Hello"+ str);
         sc.close();
     }
 }
