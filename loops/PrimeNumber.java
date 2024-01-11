@@ -7,7 +7,7 @@ public class PrimeNumber {
           int n = sc.nextInt();
           int check = 2;
           boolean isPrime = true;
-          while(check < n){
+          while(check < Math.sqrt(n)){
               if(n%check == 0){
                    isPrime = false;
                    break;
