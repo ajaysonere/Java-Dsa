@@ -11,5 +11,7 @@ public class SumOfFirstNNatural {
        System.out.println("Sum of First N Natural Number " + sum);
        
        sc.close();
+
+       exit(0);
     }
 }

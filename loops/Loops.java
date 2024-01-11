@@ -17,7 +17,7 @@ public class Loops{
        }
        
        System.out.println();
-       
+     
        sc.close();
     }
 }
