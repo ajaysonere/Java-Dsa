@@ -3,16 +3,25 @@ import java.util.*;
 public class Somequestion {
 
 
-  public static int largestElement(int arr[]) {
+  public static void largestElement(int arr[]) {
     // largest element
     
-    int ans = arr[0];
+    int largestAns = arr[0];
+    int smallestAns = arr[0];
+
     for(int i=1; i<arr.length; i++) {
-      if(ans < arr[i]){
-         ans = arr[i];
+      if(largestAns < arr[i]){
+         largestAns = arr[i];
+      }
+
+      if(arr[i] < smallestAns){
+          smallestAns = arr[i];
       }
     }
-    return ans;
+
+    System.out.println("Largest Element : " + largestAns);
+    System.out.println("smallest Element : " + smallestAns);
+  
   }
 
   public static void main(String args []) {
@@ -26,7 +35,6 @@ public class Somequestion {
     }
 
     // largest element in array
-    int largestElementAns = largestElement(arr);
-    System.out.println("Largest Element " + largestElementAns);
+    largestElement(arr);
   }
 }
