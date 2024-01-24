@@ -14,6 +14,20 @@ public class ContainesDuplicate {
     return false;
   }
 
+  public static boolean ContainesDuplicateUsingSet(int arr[]) {
+    HashSet<Integer> set = new HashSet<>();
+    for(int i=0; i<arr.length; i++){
+      set.add(arr[i]);
+    }
+
+    // size are different
+    if(set.size() == arr.length){
+      return false;
+    }
+
+    return true;
+  }
+
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -23,7 +37,7 @@ public class ContainesDuplicate {
       arr[i] = sc.nextInt();
     }
     
-    boolean containesDuplicateAns = isContainesDuplicate(arr);
+    boolean containesDuplicateAns = ContainesDuplicateUsingSet(arr);
     System.out.println(containesDuplicateAns);
     if(containesDuplicateAns == true){
       System.out.println("Duplicate present");
